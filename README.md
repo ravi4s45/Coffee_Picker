@@ -8,4 +8,5 @@
  
     I have used laravel for this task 
     My method looks like this in the controller file PATH-> Task1/app/Http/Controllers/Controller.php
+    Then Open This-> http://127.0.0.1:8000/DB
  
