@@ -12,14 +12,14 @@ use Carbon\Carbon;
 class Controller extends BaseController
 {
     static function dbCheck(){
-        $dt = date("d-m-Y H:i", strtotime(Carbon::now()->subDays(10)->toDateTimeString()));
-        $data = DB::table('tbl_name')->whereNotIn('COL 5', ['Completed'])->get();
-        $data1 = DB::table('tbl_name')->where('COL 6','<',$dt)->whereIn('COL 5', ['Pending pickup', 'pickup queued', 'pickup exception'])->get();
-      //return ('03-04-2021 18:26'<=$dt);
+        $dt = date("d-m-Y H:i", strtotime(Carbon::now()->subDays(2)->toDateTimeString())); //give us the date 2 days before the current date
         
-        $myJSON = json_encode(count($data1));
+        $task_1a = DB::table('tbl_name')->where('COL 6','<',$dt)->whereIn('COL 5', ['Pending pickup', 'pickup queued', 'pickup exception'])->get(); // task 1 part a
+        $task_1b = DB::table('tbl_name')->whereNotIn('COL 5', ['Completed'])->get();  // task 2 part b
+        
+        $myJSON = json_encode(($task_1a));
 
-return $myJSON;
+        return $myJSON;
        
     }
 }
