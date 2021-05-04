@@ -7,5 +7,5 @@
  Solution::
  
     I have used laravel for this task 
-    My method looks like this in the controller file
+    My method looks like this in the controller file PATH-> Task1/app/Http/Controllers/Controller.php
  
