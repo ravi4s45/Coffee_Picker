@@ -8,8 +8,7 @@
  
     I have used laravel for this task 
     My method looks like this in the controller file
-    
-  ``  <?php
+     <?php
 namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -31,4 +30,4 @@ class Controller extends BaseController
         return $myJSON;
        
     }
-}``
+}
